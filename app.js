@@ -1,5 +1,5 @@
 {
-let x = 10;
+let y = 10;
 }
 // x is in a block scope, so it is not accessible here
 
