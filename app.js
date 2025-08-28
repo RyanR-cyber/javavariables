@@ -1,15 +1,14 @@
-{
-let y = 10;
-}
-// x is in a block scope, so it is not accessible here
 
 {
-    var x = 7;
+    let x = 10; // 'x' is declared with 'let' inside this block, so it is block-scoped.
 }
-// x is in a global scope, so it is accessible here because var does not have block scope
+// console.log(x); // This would throw a ReferenceError because 'x' is not accessible outside the block.
 
-let text = "Hello";
-// this is a string variable
+{
+    var y = 7; // 'y' is declared with 'var', which does not have block scope. It is hoisted to the global or function scope.
+}
 
-console.log(text); // Output: Hello
-// this is string variable logged to the console
+let text = "Hello"; // 'text' is declared with 'let', so it is block-scoped to the current script or function.
+
+console.log(y); // Output: 7, because 'y' is accessible globally (or in the function scope if inside a function).
+console.log(text); // Output: Hello, because 'text' is accessible in the current scope.
